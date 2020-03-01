@@ -61,9 +61,17 @@ docs/*
 
 # binaries
 communism
+elevator/elevator
+elevator/build/*
 gdb/programs/*
 makefile/build/*
 
 # Elevator
 elevator/docs/*
-elevator/.vscode/*
+
+# VS Code Settingsfile
+.vscode/
+elevator/.vscode/
+
+# Remote test
+buildRemoteley.sh
