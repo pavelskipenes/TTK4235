@@ -29,16 +29,7 @@ bool atSomeFloor(){
 }
 
 bool atTargetFloor(Elevator* elevator) {
-    if(!atSomeFloor()){
-        return false;
-    }
-
-    if(elevator->direction == NONE){
-        return elevator->lastKnownFloor == elevator->targetFloor ? true : false;
-    }
-
-    return onFloor(elevator->targetFloor) ? true : false;
-
+    return onFloor(elevator->targetFloor);
 }
 
 static bool onFloor(int floor){
