@@ -75,7 +75,6 @@ void running(Elevator* elevator) {
 		updateLastFloor(elevator);
 		updateOrders(elevator);
 		findTargetFloor(elevator);
-		updateDirection(elevator);
 
 		// wait until a floor with orders is reached
 		while(!atTargetFloor(elevator)){
@@ -90,6 +89,7 @@ void running(Elevator* elevator) {
 			}
 
 			findTargetFloor(elevator);
+			updateDirection(elevator);
 		}
 
 		elevatorStop();
