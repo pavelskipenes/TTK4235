@@ -3,3 +3,5 @@ openocd
 doxygen
 texlive-latex-recommended
 valgrind
+gcc-arm-none-eabi
+libncurses5
