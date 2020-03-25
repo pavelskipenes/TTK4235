@@ -2,7 +2,7 @@
 #include "twi.h"
 
 /* Fyll inn denne */
-#define ACCELEROMETER_ADDRESS 0x??
+#define ACCELEROMETER_ADDRESS 0x19 // 0011001b
 
 /* Fyll inn disse */
 #define CTRL_REG1_A 0x20
@@ -13,7 +13,7 @@
 #define CTRL_REG6_A 0x25
 
 /* Fyll inn denne */
-#define XYZ_WITH_AUTO_INCREMENT 0x??
+#define XYZ_WITH_AUTO_INCREMENT 0x80 // 10000000b
 /* ^ Les seksjon 6.1.1 nøye. Tredje avsnitt */
 
 #define ENABLE_XYZ 0x07
