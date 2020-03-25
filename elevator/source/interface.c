@@ -20,7 +20,7 @@ static void flipDir(Elevator* elevator){
 
 bool atSomeFloor(){
     for(int i = 0; i < HARDWARE_NUMBER_OF_FLOORS; i++){
-        if(hardware_read_floor_sensor(i)){
+        if(onFloor(i)){
             return true;
         }
     }
@@ -29,16 +29,7 @@ bool atSomeFloor(){
 }
 
 bool atTargetFloor(Elevator* elevator) {
-    if(!atSomeFloor()){
-        return false;
-    }
-
-    if(elevator->direction == NONE){
-        return elevator->lastKnownFloor == elevator->targetFloor ? true : false;
-    }
-
-    return onFloor(elevator->targetFloor) ? true : false;
-
+    return onFloor(elevator->targetFloor);
 }
 
 static bool onFloor(int floor){
@@ -208,7 +199,7 @@ void openDoor(){
 
 void updateLastFloor(Elevator* elevator){
     for(int i = 0; i < HARDWARE_NUMBER_OF_FLOORS; i++){
-        if(hardware_read_floor_sensor(i)){
+        if(onFloor(i)){
             elevator->lastKnownFloor = i;
             hardware_command_floor_indicator_on(i);
             return;

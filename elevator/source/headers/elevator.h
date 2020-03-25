@@ -22,13 +22,13 @@
     } Direction;
 #endif
 
-    typedef enum{
-        IDLE,       ///< Idle
-        SERVING,    ///< Serving a floor and the door is open
-        RUNNING,    ///< Moving between floors
-        STOP,       ///< Cabin has been stopped
-        UNKNOWN     ///< Temporary status in transitions between other statuses.
-    } Status;
+typedef enum{
+    IDLE,       ///< Idle
+    SERVING,    ///< Serving a floor and the door is open
+    RUNNING,    ///< Moving between floors
+    STOP,       ///< Cabin has been stopped
+    UNKNOWN     ///< Temporary status in transitions between other statuses.
+} Status;
 
 /**
  * @brief Door open duration without obstructions.
