@@ -4,3 +4,5 @@ doxygen
 texlive-latex-recommended
 valgrind
 inotify-tools
+gcc-arm-none-eabi
+libncurses5
