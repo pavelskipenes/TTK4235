@@ -46,17 +46,17 @@ $(SYSTEM_BASE)/%.o : $(SYSTEM_BASE)/%.c
 
 .PHONY: setup
 setup:
-	sudo mkdir /mnt/e
+	sudo mkdir -p /mnt/e
 	sudo mount -t drvfs E: /mnt/e
-
-.PHONY: flash
-flash : $(BUILD_DIR)/main.hex
-	cp $< /mnt/e/
 
 #.PHONY: flash
 #flash : $(BUILD_DIR)/main.hex
-#	$(QUIET)nrfjprog -f nrf51 --chiperase --program $<
-#	$(QUIET)nrfjprog -f nrf51 --reset
+#	cp $< /mnt/e/
+
+.PHONY: flash
+flash : $(BUILD_DIR)/main.hex
+	$(QUIET)nrfjprog -f nrf51 --chiperase --program $<
+	$(QUIET)nrfjprog -f nrf51 --reset
 
 .PHONY: erase
 erase :
