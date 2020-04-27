@@ -1,5 +1,6 @@
 #include "button.h"
 #include "gpio.h"
+#include <stdbool.h>
 
 /* Fyll inn disse to */
 #define BUTTON_A_PIN 17
@@ -13,9 +14,9 @@ void button_init(){
 }
 
 uint8_t button_a_pressed(){
-    return ((GPIO->IN) & (1 << BUTTON_A_PIN));
+    return (~GPIO->IN & 1 << BUTTON_A_PIN) ? true : false;
 }
 
 uint8_t button_b_pressed(){
-        return ((GPIO->IN) & (1 << BUTTON_B_PIN));
+    return (~GPIO->IN & 1 << BUTTON_B_PIN) ? true : false;
 }
