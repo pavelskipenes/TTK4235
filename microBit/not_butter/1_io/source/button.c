@@ -14,9 +14,9 @@ void button_init(){
 }
 
 uint8_t button_a_pressed(){
-    return (~GPIO->IN & 1 << BUTTON_A_PIN) ? true : false;
+    return !(GPIO->IN & 1 << BUTTON_A_PIN);
 }
 
 uint8_t button_b_pressed(){
-    return (~GPIO->IN & 1 << BUTTON_B_PIN) ? true : false;
+    return !(GPIO->IN & 1 << BUTTON_B_PIN);
 }
