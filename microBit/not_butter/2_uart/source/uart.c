@@ -100,6 +100,17 @@ void uart_send(uint8_t byte){
 	UART->STOPTX = 1;
 }
 
+void uart_send_message(const char* message){
+	int i = 0;
+	while(message[i] != '\0'){
+		uart_send((uint8_t)message[i]);
+		i++;
+	}
+
+	uart_send('\n');
+	uart_send('\r');
+}
+
 uint8_t uart_receive(uint8_t * p_byte){
 	// Section 29.5
     if(!UART->RXDRDY)

@@ -17,6 +17,13 @@ void uart_init();
 void uart_send(uint8_t byte);
 
 /**
+ * @brief sends a message over UART
+ * 
+ * @param const char* 
+ */
+void uart_send_message(const char* message);
+
+/**
  * @brief Attempts to receive a single byte over UART.
  * If the UART has received data, it will be placed into
  * the location pointed to by @p p_byte, and 1 will be
