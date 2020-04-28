@@ -1,16 +1,16 @@
 #include "accelerometer.h"
 #include "twi.h"
 
-#define ACCELEROMETER_ADDRESS 0x??
+#define ACCELEROMETER_ADDRESS 0x19
 
-#define CTRL_REG1_A 0x??
-#define CTRL_REG2_A 0x??
-#define CTRL_REG3_A 0x??
-#define CTRL_REG4_A 0x??
-#define CTRL_REG5_A 0x??
-#define CTRL_REG6_A 0x??
+#define CTRL_REG1_A 0x20
+#define CTRL_REG2_A 0x21
+#define CTRL_REG3_A 0x22
+#define CTRL_REG4_A 0x23
+#define CTRL_REG5_A 0x24
+#define CTRL_REG6_A 0x25
 
-#define XYZ_WITH_AUTO_INCREMENT 0x??
+#define XYZ_WITH_AUTO_INCREMENT 0xA8
 
 #define ENABLE_XYZ 0x07
 #define DATA_RATE_100_HZ 0x50
