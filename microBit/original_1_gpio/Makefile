@@ -1,5 +1,5 @@
 FAMILY := nrf51
-SOURCES := main.c
+SOURCES := main.c button.c led_matrix.c
 
 BUILD_DIR := .build_system
 LINKER_SCRIPT := $(BUILD_DIR)/linker_script.ld
@@ -18,7 +18,7 @@ CFLAGS += -mcpu=cortex-m0 -mthumb -mabi=aapcs -mfloat-abi=soft
 CFLAGS += -ffunction-sections -fdata-sections --short-enums
 CFLAGS += -fno-strict-aliasing -fno-builtin
 # Good pracice
-CFLAGS += -Wall -Werror -std=gnu99
+CFLAGS += -Wall -Werror -std=gnu99 -g3
 # CFLAGS += -ggdb -Og / -O0 / -O3 etc
 
 ## Linker flags
