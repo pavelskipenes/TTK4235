@@ -43,5 +43,7 @@ flash:
 erase:
 	nrfjprog -f $(FAMILY) --eraseall
 
+# remove build files and ignore all errrors
 clean:
-	$(QUIET)rm $(BUILD_DIR)/main.{elf,hex}
+	$(QUIET) rm $(BUILD_DIR)/main.elf 2> /dev/null || true
+	$(QUIET) rm $(BUILD_DIR)/main.hex 2> /dev/null || true
