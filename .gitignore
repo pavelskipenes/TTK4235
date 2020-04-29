@@ -75,3 +75,6 @@ elevator/.vscode/
 
 # Remote test
 buildRemoteley.sh
+
+#lockfiles
+*.lock
