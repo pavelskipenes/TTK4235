@@ -12,7 +12,7 @@ int main(){
     led_matrix_init();
     uart_init();
     accelerometer_init();
-    server_link_init("??????", &m_state);
+    server_link_init("a354a4", &m_state);
 
     while(1){
         m_state.button_a_active = button_a_pressed();
