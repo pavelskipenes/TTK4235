@@ -7,18 +7,21 @@
 #include "print.h"
 #include "accelerometer.h"
 #include "server_link.h"
+#include "temperature.h"
 
 static void gpio_assignment();
 static void uart_assignment();
 static void twi_assignment();
 static void iot_assignment();
 
+
 int main(){
 
     //gpio_assignment();
     //uart_assignment();
     //twi_assignment();
-    iot_assignment();
+    //iot_assignment();
+    temperature_stream();
     return 0;
 }
 

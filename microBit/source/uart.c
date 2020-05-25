@@ -111,6 +111,11 @@ void uart_send_message(const char* message){
 	uart_send('\r');
 }
 
+void uart_send_number(int number){
+	char buffer[11]; // maximum integer size + /0
+	uart_send_message(itoa(number,buffer,10));
+}
+
 uint8_t uart_receive(uint8_t * p_byte){
 	// Section 29.5
     if(!UART->RXDRDY)
