@@ -9,5 +9,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: make
-      run: cd makefile/ ; make; cd ../gdb ; make;
+    - name: Compile elevator project
+      run: cd projects/elevator; make
