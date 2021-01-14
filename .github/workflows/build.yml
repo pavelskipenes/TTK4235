@@ -23,3 +23,17 @@ jobs:
       run: cd projects/microBit/corona_3_twi && make
     - name: Compile microBit project 4
       run: cd projects/microBit/corona_4_internet && make
+    - name: Compile microBit original project 1
+      run: cd projects/microBit/original_1_gpio && make
+#    - name: Compile microBit original project 2
+#      run: cd projects/microBit/original_2_uart && make
+#    - name: Compile microBit original project 3
+#      run: cd projects/microBit/original_3_gpiote && make
+#    - name: Compile microBit original project 4
+#      run: cd projects/microBit/original_4_accelerometer && make
+#    - name: Compile microBit original project 5
+#      run: cd projects/microBit/original_5_ble_gap && make
+    - name: debugging assignment
+      run: cd assignments/debugging && make
+    - name: make assignment
+      run: cd assignments/makefile
