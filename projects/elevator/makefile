@@ -20,7 +20,7 @@ $(EXECUTABLE_NAME) : $(OBJ) | $(DRIVER_ARCHIVE)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(BUILD_DIR) :
-	mkdir -p $@/driver
+	mkdir -p $@driver
 
 $(BUILD_DIR)%.o : $(SOURCE_DIR)%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
