@@ -9,5 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: Installing dependencies
+      run: sudo apt update && sudo apt install libcomedi-dev
     - name: Compile elevator project
       run: cd projects/elevator; make
