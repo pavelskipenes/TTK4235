@@ -9,7 +9,17 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Installing dependencies
-      run: sudo apt update && sudo apt install libcomedi-dev
+    - name: Update mirrors
+      run: sudo apt update
+    - name: Install missing dependencies
+      run: sudo apt install libcomedi-dev gcc-arm-none-eabi
     - name: Compile elevator project
       run: cd projects/elevator; make
+    - name: Compile microBit project 1
+      run: cd projects/microBit/corona_1_io && make
+    - name: Compile microBit project 2
+      run: cd projects/microBit/corona_2_uart && make
+    - name: Compile microBit project 3
+      run: cd projects/microBit/corona_3_twi && make
+    - name: Compile microBit project 4
+      run: cd projects/microBit/corona_4_internet && make
