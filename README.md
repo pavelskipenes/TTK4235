@@ -1,20 +1,32 @@
-![General CI](https://github.com/pavelnoen94/embededSystemsCource/workflows/General%20CI/badge.svg)
-# Embeded system cource
-Just a simple repo to maintain project files.
+# Embedded System course
+This repo contains course files for TTK4235 - Embedded Systems at NTNU.
 
-## Setup
-```sh
-git clone https://github.com/pavelnoen94/embededSystemsCource
-sudo embededSystemsCource/setup/install.sh
-```
+## Repository structure
+This repo contains mainly two projects and some exercises.
 
-## Repo contents
+## Projects
 
-### makefile
-Generate a makefile to compile all files and clean all files.
+### Elevator
+Here are the source and assignment papers for elevator project. Documentation are also included.
 
-### gdb
-Some source files to be debugged with gdb and valgrind.
+### MicroBit
+Microbit directory has many small assignments. Some of them have been changed (made easier) due to the the pandemic.
 
-### OpenOCD
-Currentlly empty. Will be used for hardware debugging later.
+### Assignments
+Here are some smaller assignments we had to complete.
+#### makefile
+A small assignment for getting to know GNU make.
+
+#### debugging
+A small assignment for getting to know GNU gdb and valgrind. 
+
+#### documentation
+A small assignment for getting to know how to work with doxygen. 
+
+#### PLS
+Some ancient technology that we had to learn.
+
+## extra
+This directory contains some tools to make the life a little bit easier.
+- `autobuild.sh` compiles the project as soon as you save a source file in the project making the development process a bit faster.
+- `install.sh` installs missing dependencies
