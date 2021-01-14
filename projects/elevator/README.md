@@ -1,8 +1,15 @@
 # Setup
-To compile the binaries you need a package called comidilib. It's available through AUR. For debian based systems search the web.
+To compile the binaries you need a package called comidi.
+
+For arch based systems:
 ```bash
 yay -S comidilib
 ```
+For debian based systems:
+```bash
+apt install libcomedi-dev
+```
+
 Then just compile like any other program
 ```bash
 make
